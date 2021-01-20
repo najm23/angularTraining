@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
     <mat-toolbar color="primary">
       <span>header works!</span>
       <span class="spacer"></span>
-      <a routerLink="/user/profile"[routerLinkActive]= "'active'"> Profile </a>
-      <a routerLink="/homme" [routerLinkActive]= "'active'"> Home </a>
-      <a routerLink="/getStarted"[routerLinkActive]= "'active'"> Get Started</a>
+      <a class="menu-item" routerLink="/user/profile"[routerLinkActive]= "'active'"> Profile </a>
+      <a class="menu-item" routerLink="/homme" [routerLinkActive]= "'active'"> Home </a>
+      <a class="menu-item" routerLink="/getStarted"[routerLinkActive]= "'active'"> Get Started</a>
     </mat-toolbar>
   `,
-  styles: [`.spacer {flex: 1 1 auto;}` ]
+ styles: [`
+ .bold { font-weight: bolder; color: red; }
+ .menu-item { margin: 0 15px; }
+ .active { font-weight: bolder; }
+ .spacer { flex: 1 1 auto; }
+`]
 })
 export class HeaderComponent implements OnInit {
 
