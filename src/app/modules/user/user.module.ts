@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
-import { MaterialModule } from 'src/app/material.module';
+import { SharedModule } from 'src/app/shared.module';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { MaterialModule } from 'src/app/material.module';
   imports: [
     CommonModule,
     UserRoutingModule,
-    MaterialModule
+    SharedModule
   ]
 })
 export class UserModule { }

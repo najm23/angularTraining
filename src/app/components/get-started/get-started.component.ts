@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-get-started',
@@ -14,7 +14,8 @@ export class GetStartedComponent implements OnInit {
   isDisable = true;
   fruits = ['orange', 'banana', 'lemon']
 
-
+  @Output()
+  buttonClicked = new EventEmitter<string>();
 
   constructor() { }
 
@@ -24,6 +25,7 @@ export class GetStartedComponent implements OnInit {
 
   clickMe(): void{
     console.log('button clicked');
+    this.buttonClicked.emit('New title');
   }
 
   toggleState(): void{
